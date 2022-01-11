@@ -1,3 +1,5 @@
+
+-- PLUGINS
 local customPlugins = require "core.customPlugins"
 
 customPlugins.add(function(use)
@@ -8,4 +10,13 @@ customPlugins.add(function(use)
           ) end}
  end)
 
--- the above snippet is just an example
+
+ -- MAPPINGS
+ local map = require("core.utils").map
+
+ -- Disable Arrow Keys
+ map("n", "<Down>", "<NOP>")
+ map("n", "<Up>", "<NOP>")
+ map("n", "<Left>", "<NOP>")
+ map("n", "<Right>", "<NOP>")
+
