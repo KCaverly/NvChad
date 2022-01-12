@@ -8,8 +8,8 @@ customPlugins.add(function(use)
         config = function() require("emanote").setup(
           {emanote_home="~/personal/kb"}
           ) end}
- end)
 
+ end)
 
  -- MAPPINGS
  local map = require("core.utils").map
