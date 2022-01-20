@@ -9,7 +9,43 @@ customPlugins.add(function(use)
           {emanote_home="~/personal/kb"}
           ) end}
 
+   use {"~/personal/py.nvim/",
+        ft = {'python'},     
+        config = function() require("py").setup() end,
+        }
+
+    use {
+      "luukvbaal/stabilize.nvim",
+      config = function() require("stabilize").setup() end
+    }
+
+    use {
+   "Pocco81/AutoSave.nvim",
+   config = function()
+      local autosave = require "autosave"
+
+      autosave.setup {
+         enabled = true,
+         execution_message = "autosaved at : " .. vim.fn.strftime "%H:%M:%S",
+         events = { "InsertLeave", "TextChanged" },
+         conditions = {
+            exists = true,
+            filetype_is_not = {},
+            modifiable = true,
+         },
+         clean_command_line_interval = 2500,
+         on_off_commands = true,
+         write_all_buffers = false,
+      }
+   end,
+} 
+
+   use {'rlane/pounce.nvim'}
+
+   use {'rcarriga/nvim-notify'}
+
  end)
+
 
  -- MAPPINGS
  local map = require("core.utils").map
@@ -39,3 +75,6 @@ customPlugins.add(function(use)
  map("i", "<C-k>", "<esc>:m .-2<CR>==i")
  map("n", "<leader>k", ":m .-2<CR>==")
  map("n", "<leader>j", ":m .+1<CR>==")
+
+ -- Plugin Specific: pounce
+ map("n", "<leader>s", "<cmd>Pounce<CR>")
