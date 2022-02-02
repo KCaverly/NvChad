@@ -16,7 +16,6 @@ return {
 
   {
     "~/personal/py.nvim",
-    after = "notify",
     ft = {"python"},
     config = function() require("py").setup() end,
   },
