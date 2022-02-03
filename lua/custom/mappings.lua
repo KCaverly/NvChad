@@ -28,3 +28,8 @@ map("n", "<leader>j", ":m .+1<CR>==")
 
 -- Workspaces
 map("n", "<leader>fs", ":Telescope workspaces <CR>")
+
+
+-- Comment.Nvim Fix
+map("n", "gc", ":lua require('Comment.api').toggle_current_linewise()<CR>")
+map("v", "gc", ":lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>")
