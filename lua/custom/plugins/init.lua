@@ -47,6 +47,6 @@ return {
       require("telescope").load_extension("workspaces")
 
     end
-  }
+  },
 
 }
