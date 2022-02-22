@@ -49,4 +49,22 @@ return {
     end
   },
 
+  {
+    "folke/twilight.nvim",
+    config = function()
+      require("twilight").setup({})
+    end
+  },
+
+  {
+    "Pocco81/TrueZen.nvim",
+  },
+
+  {
+    "WhoIsSethDaniel/toggle-lsp-diagnostics.nvim",
+    config = function()
+      require("toggle_lsp_diagnostics").init()
+    end
+  }
+
 }

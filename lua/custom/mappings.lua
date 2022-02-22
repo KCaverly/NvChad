@@ -28,3 +28,13 @@ map("n", "<leader>j", ":m .+1<CR>==")
 
 -- Workspaces
 map("n", "<leader>fs", ":Telescope workspaces <CR>")
+
+-- Twilight
+map("n", "<leader>tw", ":Twilight<CR>")
+
+-- TrueZen
+map("n", "<leader>tq", ":TZAtaraxis<CR>")
+
+-- LSP
+-- Remove LSP Diagnostics
+map("n", "<leader>ld", ":ToggleDiag<CR>")
