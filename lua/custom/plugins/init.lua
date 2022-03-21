@@ -65,6 +65,24 @@ return {
     config = function()
       require("toggle_lsp_diagnostics").init()
     end
+  },
+
+  {
+    "nvim-telescope/telescope-media-files.nvim",
+    module = "telescope",
+    config = function()
+
+      require("telescope").setup({
+        extensions = {
+          media_files = {
+            filetypes = {"png", "webp", "jpg", "jpeg", "pdf"},
+            find_cmd = "rg"
+          }
+        }
+      })
+
+      require('telescope').load_extension('media_files')
+    end
   }
 
 }
