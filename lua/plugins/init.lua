@@ -65,8 +65,9 @@ local plugins = {
 
    {
       "nvim-treesitter/nvim-treesitter",
-      event = "BufRead",
+      event = { "BufRead", "BufNewFile" },
       config = override_req("nvim_treesitter", "plugins.configs.treesitter", "setup"),
+      run = ":TSUpdate",
    },
 
    -- git stuff
@@ -125,7 +126,7 @@ local plugins = {
       "rafamadriz/friendly-snippets",
       module = "cmp_nvim_lsp",
       disable = not plugin_settings.status.cmp,
-      event = "InsertCharPre",
+      event = "InsertEnter",
    },
 
    {
@@ -184,7 +185,7 @@ local plugins = {
    {
       disable = not plugin_settings.status.alpha,
       "goolord/alpha-nvim",
-      config = override_req("alpha", "plugins.configs.alpha"),
+      config = override_req("alpha", "plugins.configs.alpha", "setup"),
    },
 
    {
