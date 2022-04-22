@@ -83,6 +83,13 @@ return {
 
       require('telescope').load_extension('media_files')
     end
+  },
+
+  {
+    "ray-x/go.nvim",
+    config = function()
+      require('go').setup()
+    end
   }
 
 }
