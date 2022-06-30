@@ -54,6 +54,8 @@ return {
     config = function()
       require("trouble").setup {}
     end
-  }
+  },
+
+  ["simrat39/symbols-outline.nvim"] = {}
 
 }

@@ -36,7 +36,10 @@ M.general = {
     ["<leader>w"] = {":term<CR>", "Open Terminal in Tab"},
 
     -- Toggle Trouble
-    ["<leader>tt"] = {":TroubleToggle<CR>", "ToggleTrouble"},
+    ["<leader>tt"] = {":TroubleToggle<CR>", "Toggle Trouble"},
+
+    -- Toggle Symbols
+    ["<leader>ts"] = {":SymbolsOutline<CR>", "Toggle SymbolsOutline"}
 
   },
 
