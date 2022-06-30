@@ -37,4 +37,16 @@ return {
 
   ["Pocco81/TrueZen.nvim"] = {},
 
+  ["luukvbaal/stabilize.nvim"] = {
+    config = function()
+      require("stabilize").setup()
+    end },
+
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+    after = "nvim-lspconfig",
+    config = function()
+      require("custom.plugins.null-ls").setup()
+    end,
+  }
+
 }
