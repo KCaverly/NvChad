@@ -56,7 +56,8 @@ M.general = {
 
   t = {
     ["<Esc>"] = { termcodes "<C-\\><C-N>", "Escape Terminal Mode"},
-    ["jk"] = { termcodes "<C-\\><C-N>", "Escape Terminal Mode"}
+    ["jk"] = { termcodes "<C-\\><C-N>", "Escape Terminal Mode"},
+    ["ju"] = { termcodes "ju", "JU Weirdness"}
   }
 
 }
