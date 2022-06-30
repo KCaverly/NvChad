@@ -1,7 +1,3 @@
-require("custom.mappings")
+-- example file i.e lua/custom/init.lua
 
-vim.o.shell = 'zsh'
-
--- Run gofmt on save
-vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').gofmt() ]], false)
-
+-- load your globals, autocmds here or anything .__.

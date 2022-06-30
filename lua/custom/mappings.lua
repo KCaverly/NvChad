@@ -1,40 +1,67 @@
-local map = require("core.utils").map
- 
--- Disable Arrow Keys
-map("n", "<Down>", "<NOP>")
-map("n", "<Up>", "<NOP>")
-map("n", "<Left>", "<NOP>")
-map("n", "<Right>", "<NOP>")
+local M = {}
 
--- Misc
-map("n", "Y", "y$")
+local function termcodes(str)
+   return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
 
--- Keep Search Items centered
-map("n", "n", "nzzzv")
-map("n", "N", "Nzzzv")
-map("n", "J", "mzJ`z")
+M.general = {
 
--- Undo Break Points
-map("i", ",", ",<c-g>u")
-map("i", ".", ".<c-g>u")
-map("i", "!", "!<c-g>u") 
-map("i", "?", "?<c-g>u")
+  n = {
 
--- Moving Text Around
-map("i", "<C-j>", "<esc>:m .+1<CR>==i")
-map("i", "<C-k>", "<esc>:m .-2<CR>==i")
-map("n", "<leader>k", ":m .-2<CR>==")
-map("n", "<leader>j", ":m .+1<CR>==")
+    -- Disable Arrow Keys
+    ["<Down>"] = {"<NOP>", "Disable <Down>", opts={}},
+    ["<Up>"] = {"<NOP>", "Disable <Up>", opts={}},
+    ["<Left>"] = {"<NOP>", "Disable <Left>", opts={}},
+    ["<Right>"] = {"<NOP>", "Disable <Right>", opts={}},
 
--- Workspaces
-map("n", "<leader>fs", ":Telescope workspaces <CR>")
+    -- Toggle Line Diagnostics
+    ["<leader>ld"] = {":ToggleDiag<CR>", "Toggle Line Diagnostics", opts={}},
 
--- Twilight
-map("n", "<leader>tw", ":Twilight<CR>")
+    -- Keep Search Items Centered
+    ["n"] = {"nzzzv", "Keep Search Items Centered", opts={}},
+    ["N"] = {"Nzzzv", "Keep Search Items Centered", opts={}},
+    ["J"] = {"mzJ`z", "Keep Search Items Centered", opts={}},
 
--- TrueZen
-map("n", "<leader>tq", ":TZAtaraxis<CR>")
+    -- Move Text Around
+    ["<leader>j"] = {":m .+1<CR>==", "Move Line Up in Normal Mode"},
+    ["<leader>k"] = {":m .-2<CR>==", "Move Line Down in Normal Mode"},
 
--- LSP
--- Remove LSP Diagnostics
-map("n", "<leader>ld", ":ToggleDiag<CR>")
+    -- Workspaces
+    ["<leader>fs"] = {":Telescope workspaces <CR>", "Toggle Workspaces"},
+    
+    -- Twilight
+    ["<leader>tw"] = {":Twilight<CR>", "Toggle Twilight"},
+
+    -- Open Terminal in Window
+    ["<leader>w"] = {":term<CR>", "Open Terminal in Tab"},
+
+  },
+
+  i = {
+
+    -- Quick JK to Escape
+    ["jk"] = {"<Esc>", "Quick JK to Escape", opts={}},
+
+    -- Moving Text Around
+    ["<C-j>"] = {"<Esc>:m .+1<CR>==i", "Move Line Up in Insert Mode"},
+    ["<C-k>"] = {"<Esc>:m .-2<CR>==i", "Move Line Down in Insert Mode"},
+
+  },
+
+  t = {
+    ["<Esc>"] = { termcodes "<C-\\><C-N>", "Escape Terminal Mode"},
+    ["jk"] = { termcodes "<C-\\><C-N>", "Escape Terminal Mode"}
+  }
+
+}
+
+
+M.truzen = {
+  n = {
+    ["<leader>ta"] = {"<cmd> TZAtaraxis <CR>", "Truzen Ataraxis"},
+    ["<leader>tm"] = {"<cmd> TZMinimalist <CR>", "Truzen Minimal"},
+    ["<leader>tf"] = {"<cmd> TZFocus <CR>", "Truzen Focus"},
+  }
+}
+
+return M
