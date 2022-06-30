@@ -35,6 +35,9 @@ M.general = {
     -- Open Terminal in Window
     ["<leader>w"] = {":term<CR>", "Open Terminal in Tab"},
 
+    -- Toggle Trouble
+    ["<leader>tt"] = {":TroubleToggle<CR>", "ToggleTrouble"},
+
   },
 
   i = {
