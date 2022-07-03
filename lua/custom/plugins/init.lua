@@ -56,6 +56,29 @@ return {
     end
   },
 
-  ["simrat39/symbols-outline.nvim"] = {}
+  ["simrat39/symbols-outline.nvim"] = {},
+
+  ["ggandor/leap.nvim"] = {
+    config = function()
+      require("leap").set_default_keymaps()
+    end
+  },
+
+  ["danymat/neogen"] = {
+    requires = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require('neogen').setup {
+        enabled = true,
+        languages = {
+          python = {
+            template = {
+              annotation_convention = "numpydoc"
+            }
+          }
+        }
+      }
+    end,
+
+  }
 
 }
