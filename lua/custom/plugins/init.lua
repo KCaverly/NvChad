@@ -1,3 +1,4 @@
+
 return {
 
   ["natecraddock/workspaces.nvim"] = {
@@ -87,5 +88,16 @@ return {
       require("ufo").setup()
     end
   },
+
+  ["andreadev-it/shade.nvim"] = {
+    module = "shade",
+    config = function()
+      require'shade'.setup({
+        overlay_opacity = 50,
+        opacity_step = 1,
+        exclude_filetypes = { "NvimTree" }
+      })
+    end,
+  }
 
 }
