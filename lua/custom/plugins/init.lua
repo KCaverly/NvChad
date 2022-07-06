@@ -1,4 +1,3 @@
-
 return {
 
   ["natecraddock/workspaces.nvim"] = {
@@ -98,6 +97,15 @@ return {
         exclude_filetypes = { "NvimTree" }
       })
     end,
+  },
+
+  ["rcarriga/nvim-notify"] = {},
+
+  ["~/personal/py.nvim"] = {
+    ft = {"python"},
+    config = function()
+      require("py").setup()
+    end
   }
 
 }
