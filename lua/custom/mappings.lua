@@ -28,7 +28,7 @@ M.general = {
 
     -- Workspaces
     ["<leader>fs"] = {":Telescope workspaces <CR>", "Toggle Workspaces"},
-    
+
     -- Twilight
     ["<leader>tw"] = {":Twilight<CR>", "Toggle Twilight"},
 
@@ -46,6 +46,8 @@ M.general = {
 
     -- Generate Docstrings
     ["<leader>gd"] = {":Neogen<CR>", "Generate Docstring"},
+
+    ["<C-f>"] = {':silent !tmux split-window "~/.local/bin/ff_script"<CR>' , "Toggle Project Finder"}
 
   },
 
