@@ -83,4 +83,6 @@ return {
 
   },
 
+  ["kdheepak/lazygit.nvim"] = {}
+
 }
