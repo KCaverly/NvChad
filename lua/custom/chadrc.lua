@@ -32,7 +32,7 @@ M.mappings = require "custom.mappings"
 
 M.options = {
    user = function()
-      vim.o.foldcolumn = '1'
+      vim.o.foldcolumn = '0'
       vim.o.foldlevel = 99
       vim.o.foldlevelstart = -1
       vim.o.foldenable = true
