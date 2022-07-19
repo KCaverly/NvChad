@@ -20,7 +20,16 @@ M.nvimtree = {
 
 M.ui = {
    tabufline = {
-      lazyload = false
+      lazyload = false,
+      overriden_modules = function()
+         return require "custom.plugins.tabufline"
+      end,
+   },
+
+   statusline = {
+      overriden_modules = function()
+         return require "custom.plugins.statusline"
+      end,
    }
 }
 
