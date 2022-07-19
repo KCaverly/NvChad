@@ -1,28 +1,5 @@
 return {
 
-  ["natecraddock/workspaces.nvim"] = {
-    after = "telescope.nvim",
-    config = function()
-
-      require("workspaces").setup({
-        hooks = {
-          open = { "Telescope find_files " }
-        }
-      })
-
-      require("telescope").setup({
-        extensions = {
-          workspaces = {
-            keep_insert = true
-          }
-        }
-      })
-
-      require("telescope").load_extension("workspaces")
-
-    end
-  },
-
   ["WhoIsSethDaniel/toggle-lsp-diagnostics.nvim"] = {
     config = function()
       require("toggle_lsp_diagnostics").init()
@@ -84,7 +61,11 @@ return {
   ["kevinhwang91/nvim-ufo"] = {
     requires = "kevinhwang91/promise-async",
     config = function()
-      require("ufo").setup()
+      require("ufo").setup({
+         provider_selector = function(bufnr, filetype, buftype)
+            return {"treesitter", "indent"}
+         end
+      })
     end
   },
 

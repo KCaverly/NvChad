@@ -47,7 +47,10 @@ M.general = {
     -- Generate Docstrings
     ["<leader>gd"] = {":Neogen<CR>", "Generate Docstring"},
 
-    ["<C-f>"] = {':silent !tmux split-window "~/.local/bin/ff_script"<CR>' , "Toggle Project Finder"}
+    ["<C-f>"] = {':silent !tmux split-window "~/.local/bin/ff_script"<CR>' , "Toggle Project Finder"},
+
+    ["zR"] = {":lua require('ufo').openAllFolds() <CR>", "Open All Folds"},
+    ["zM"] = {":lua require('ufo').closeAllFolds() <CR>", "Close All Folds"}
 
   },
 

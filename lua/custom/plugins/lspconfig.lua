@@ -4,7 +4,7 @@ local M = {}
 M.setup_lsp = function(attach, capabilities)
   local lspconfig = require "lspconfig"
 
-  local servers = { "pyright" }
+  local servers = { "pyright", "gopls" }
 
   capabilities.textDocument.foldingRange = {
     dynamicRegistration = false,

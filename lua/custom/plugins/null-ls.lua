@@ -4,8 +4,14 @@ local b = null_ls.builtins
 local sources = {
 
   -- Python
-  b.formatting.black
-  b.formatting.isort
+  b.formatting.black,
+  b.formatting.isort,
+
+  -- Golang
+  b.formatting.gofmt,
+
+  -- Lua
+  b.formatting.stylua
 
 }
 
