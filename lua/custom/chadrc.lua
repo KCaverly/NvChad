@@ -36,6 +36,10 @@ M.options = {
       vim.o.foldlevel = 99
       vim.o.foldlevelstart = -1
       vim.o.foldenable = true
+
+      vim.g.symbols_outline = {
+         auto_preview = false
+      }
    end,
 }
 
