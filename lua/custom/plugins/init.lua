@@ -76,6 +76,11 @@ return {
     config = function()
       require("py").setup()
     end
-  }
+  },
+
+  ["goolord/alpha-nvim"] = {
+     disable = false,
+
+  },
 
 }
