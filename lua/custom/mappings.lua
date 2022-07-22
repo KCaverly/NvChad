@@ -42,7 +42,7 @@ M.general = {
     ["<leader>ts"] = {":SymbolsOutline<CR>", "Toggle SymbolsOutline"},
 
     -- Bidirectional Leap
-    ["<leader>s"] = {":lua require'leap'.leap{['target-windows'] = {vim.api.nvim_get_current_win()}}<CR>", "Search via Leap"},
+    ["<leader>s"] = {":lua require'leap'.leap{ target_windows = {vim.api.nvim_get_current_win()}}<CR>", "Search via Leap"},
 
     -- Generate Docstrings
     ["<leader>gd"] = {":Neogen<CR>", "Generate Docstring"},
