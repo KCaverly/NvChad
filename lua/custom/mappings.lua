@@ -56,7 +56,18 @@ M.general = {
     ["zM"] = {":lua require('ufo').closeAllFolds() <CR>", "Close All Folds"},
 
     -- LazyGit
-    ["<leader>gg"] = {":LazyGit<CR>", "Launch LazyGit"}
+    ["<leader>gg"] = {":LazyGit<CR>", "Launch LazyGit"},
+
+    -- Nvim-Dap
+    ["<leader>db"] = {":lua require'dap'.toggle_breakpoint()<CR>", "nvim-dap toggle breakpoint"},
+    ["<leader>dc"] = {":lua require'dap'.continue()<CR>", "nvim-dap continue"},
+    ["<leader>dso"] = {":lua require'dap'.step_over()<CR>", "nvim-dap step over"},
+    ["<leader>dsi"] = {":lua require'dap'.step_into()<CR>", "nvim-dap step into"},
+    ["<leader>dsx"] = {":lua require'dap'.step_out()<CR>", "nvim-dap step out"},
+    ["<leader>dr"] = {":lua require'dap'.repl_open()<CR>", "nvim-dap open repl"},
+    ["<leader>dl"] = {":lua require'dap'.run_last()<CR>", "nvim-dap run last"},
+    ["<leader>du"] = {":lua require'dapui'.toggle()<CR>", "nvim-dap-ui toggle ui"}
+
 
   },
 

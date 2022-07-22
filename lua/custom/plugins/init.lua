@@ -83,6 +83,24 @@ return {
 
   },
 
-  ["kdheepak/lazygit.nvim"] = {}
+  ["kdheepak/lazygit.nvim"] = {},
+
+  ["mfussenegger/nvim-dap"] = {},
+  ["mfussenegger/nvim-dap-python"] = {
+     config = function()
+        require("dap-python").setup()
+     end
+  },
+  ["rcarriga/nvim-dap-ui"] = {
+     config = function()
+        require("dapui").setup()
+     end
+  },
+  ["theHamsta/nvim-dap-virtual-text"] = {
+     config = function()
+        require("nvim-dap-virtual-text").setup()
+     end
+  },
+  ["nvim-telescope/telescope-dap.nvim"] = {}
 
 }
