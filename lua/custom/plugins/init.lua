@@ -1,5 +1,12 @@
 return {
 
+  ["neovim/nvim-lspconfig"] = {
+    config = function()
+      require "plugins.configs.lspconfig"
+      require "custom.plugins.lspconfig"
+    end,
+  },
+
   ["WhoIsSethDaniel/toggle-lsp-diagnostics.nvim"] = {
     config = function()
       require("toggle_lsp_diagnostics").init()

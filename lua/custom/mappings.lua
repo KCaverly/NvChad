@@ -45,7 +45,7 @@ M.general = {
     ["<leader>s"] = {":lua require'leap'.leap{ target_windows = {vim.api.nvim_get_current_win()}}<CR>", "Search via Leap"},
 
     -- Generate Docstrings
-    ["<leader>gd"] = {":Neogen<CR>", "Generate Docstring"},
+    ["<leader>gn"] = {":Neogen<CR>", "Generate Docstring"},
 
     -- Peaches
     ["<C-f>"] = {':silent !tmux split-window "~/.local/bin/peaches projects"<CR>' , "Toggle Project Launcher"},
