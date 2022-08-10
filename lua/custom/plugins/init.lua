@@ -115,6 +115,6 @@ return {
         require("nvim-dap-virtual-text").setup()
      end
   },
-  ["nvim-telescope/telescope-dap.nvim"] = {}
+  ["nvim-telescope/telescope-dap.nvim"] = {},
 
 }
