@@ -71,13 +71,6 @@ return {
 
   ["rcarriga/nvim-notify"] = {},
 
-  ["~/personal/py.nvim"] = {
-    ft = {"python"},
-    config = function()
-      require("py").setup()
-    end
-  },
-
   ["goolord/alpha-nvim"] = {
      disable = false,
 
