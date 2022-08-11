@@ -33,5 +33,24 @@ M.ui = {
    }
 }
 
+M.mason = {
+
+  ensure_installed = {
+    
+    -- python
+    "isort",
+    "black",
+    "pyright",
+    "flake8",
+    "mypy",
+
+    -- lua
+    "lua-language-server",
+    "stylua",
+
+  }
+
+}
+
 
 return M

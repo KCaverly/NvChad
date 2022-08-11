@@ -13,14 +13,6 @@ return {
     end
   },
 
-  ["folke/twilight.nvim"] = {
-    config = function()
-      require("twilight").setup({})
-    end
-  },
-
-  ["Pocco81/TrueZen.nvim"] = {},
-
   ["luukvbaal/stabilize.nvim"] = {
     config = function()
       require("stabilize").setup()
@@ -82,8 +74,6 @@ return {
      disable = false,
 
   },
-
-  ["kdheepak/lazygit.nvim"] = {},
 
   ["mfussenegger/nvim-dap"] = {},
   ["mfussenegger/nvim-dap-python"] = {
