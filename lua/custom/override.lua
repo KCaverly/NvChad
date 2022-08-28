@@ -1,4 +1,3 @@
-
 local M = {}
 
 M.treesitter = {
@@ -8,7 +7,7 @@ M.treesitter = {
     "bash",
     "python",
     "markdown",
-    "go"
+    "go",
   },
 }
 
@@ -19,24 +18,24 @@ M.nvimtree = {
 }
 
 M.ui = {
-   tabufline = {
-      lazyload = false,
-      overriden_modules = function()
-         return require "custom.plugins.tabufline"
-      end,
-   },
+  tabufline = {
+    lazyload = false,
+    overriden_modules = function()
+      return require "custom.plugins.tabufline"
+    end,
+  },
 
-   statusline = {
-      overriden_modules = function()
-         return require "custom.plugins.statusline"
-      end,
-   }
+  statusline = {
+    overriden_modules = function()
+      return require "custom.plugins.statusline"
+    end,
+  },
 }
 
 M.mason = {
 
   ensure_installed = {
-    
+
     -- python
     "isort",
     "black",
@@ -48,9 +47,9 @@ M.mason = {
     "lua-language-server",
     "stylua",
 
-  }
-
+    -- csharp
+    "omnisharp",
+  },
 }
-
 
 return M
