@@ -7,7 +7,7 @@ end
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
 M.capabilities.textDocument.completion.completionItem.snippetSupport = true
-M.capabilities = cmp_nvim_lsp.default_capabilities(M.capabilities)
+M.capabilities = cmp_nvim_lsp.update_capabilities(M.capabilities)
 
 M.setup = function()
 	local signs = {
@@ -79,6 +79,11 @@ M.on_attach = function(client, bufnr)
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
+
+  if client_name == "pyright" then
+    local pyright_opts = require("user.lsp.settings.pyright")
+    opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+  end
 
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")

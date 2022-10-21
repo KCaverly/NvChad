@@ -70,3 +70,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- Telescope --
+-- Launch telescope pickers
+keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({previewer = false }))<CR>", opts)
+keymap("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
