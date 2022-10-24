@@ -96,6 +96,7 @@ return packer.startup(function(use)
 
   -- Movement
   use { "karb94/neoscroll.nvim", commit = "54c5c419f6ee2b35557b3a6a7d631724234ba97a" }
+  use { "ggandor/leap.nvim", commit = "847a1dcfb1a3a576860151754d95fb3b0014663e" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

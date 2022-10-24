@@ -52,7 +52,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 
@@ -83,10 +83,19 @@ keymap("n", "<C-p>", ":lua _PYTHON_TOGGLE()<CR>", opts)
 
 -- Telescope --
 -- Launch telescope pickers
-keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({previewer = false }))<CR>", opts)
+keymap(
+  "n",
+  "<leader>ff",
+  "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({previewer = false }))<CR>",
+  opts
+)
 keymap("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
 
 -- NvimTree --
 -- Manage NvimTree
 keymap("n", "<leader>e", ":NvimTreeFocus<CR>", opts)
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+
+-- Movement --
+-- Functionality surrounding in buffer movement and navigation
+keymap("n", "<leader>s", ":lua require('leap').leap { target_windows = { vim.fn.win_getid() } }<CR>", opts)
