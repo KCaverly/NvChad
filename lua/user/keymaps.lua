@@ -81,16 +81,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "<C-p>", ":lua _PYTHON_TOGGLE()<CR>", opts)
 
--- Telescope --
--- Launch telescope pickers
-keymap(
-  "n",
-  "<leader>ff",
-  "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({previewer = false }))<CR>",
-  opts
-)
-keymap("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
-
 -- NvimTree --
 -- Manage NvimTree
 keymap("n", "<leader>e", ":NvimTreeFocus<CR>", opts)
