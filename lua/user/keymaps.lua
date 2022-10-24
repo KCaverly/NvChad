@@ -18,6 +18,17 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- Disable Arrow Keys
+-- We dont need this, force us to use HJKL
+keymap("n", "<Up>", "<NOP>", opts)
+keymap("n", "<Down>", "<NOP>", opts)
+keymap("n", "<Left>", "<NOP>", opts)
+keymap("n", "<Right>", "<NOP>", opts)
+keymap("v", "<Up>", "<NOP>", opts)
+keymap("v", "<Down>", "<NOP>", opts)
+keymap("v", "<Left>", "<NOP>", opts)
+keymap("v", "<Right>", "<NOP>", opts)
+
 -- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -28,12 +39,13 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>x", ":Bdelete!<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -75,4 +87,5 @@ keymap("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
 
 -- NvimTree --
 -- Manage NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeFocus<CR>", opts)
+keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
