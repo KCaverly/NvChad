@@ -1,7 +1,6 @@
 require("gruvbox").setup {
   overrides = {
     TabLineFill = { bg = "#282828" },
-    TabLineSel = { bg = "#3c3836" },
     SignColumn = { bg = "#282828" },
     GruvboxBlueSign = { bg = "#282828" },
     GruvboxRedSign = { bg = "#282828" },
