@@ -1,6 +1,6 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
+-- local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -89,3 +89,7 @@ keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 -- Movement --
 -- Functionality surrounding in buffer movement and navigation
 keymap("n", "<leader>s", ":lua require('leap').leap { target_windows = { vim.fn.win_getid() } }<CR>", opts)
+
+-- Trouble --
+-- Toggle Trouble.nvim quickfix list
+keymap("n", "<leader>tr", ":TroubleToggle<CR>", opts)

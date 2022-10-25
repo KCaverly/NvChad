@@ -98,6 +98,13 @@ return packer.startup(function(use)
   use { "karb94/neoscroll.nvim", commit = "54c5c419f6ee2b35557b3a6a7d631724234ba97a" }
   use { "ggandor/leap.nvim", commit = "847a1dcfb1a3a576860151754d95fb3b0014663e" }
 
+  -- Trouble
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    commit = "ed65f84abc4a1e5d8f368d7e02601fc0357ea15e",
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
