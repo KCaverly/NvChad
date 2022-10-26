@@ -93,3 +93,12 @@ keymap("n", "<leader>s", ":lua require('leap').leap { target_windows = { vim.fn.
 -- Trouble --
 -- Toggle Trouble.nvim quickfix list
 keymap("n", "<leader>tr", ":TroubleToggle<CR>", opts)
+
+-- Peaches --
+-- Trigger peaches commands
+keymap("n", "<C-f>", ':silent !tmux split-window "~/.local/bin/peaches projects"<CR>', opts)
+keymap("n", "<C-g>", ':silent !tmux split-window "~/.local/bin/peaches ssh"<CR>', opts)
+
+-- Symbols-Outline --
+-- Open Right hand Symbols Outline Panel
+keymap("n", "<leader>ts", ":SymbolsOutline<CR>", opts)
