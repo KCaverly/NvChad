@@ -15,7 +15,7 @@ null_ls.setup({
     -- Python
 		formatting.black.with({ extra_args = { "--fast" } }),
     formatting.isort,
-    diagnostics.mypy,
-    diagnostics.flake8
+    diagnostics.mypy.with({ extra_args = {"--ignore-missing-imports", "--follow-imports=silent"}}),
+    diagnostics.flake8.with({ extra_args = {"--max-line-length", "88", "--ignore=E203"}})
 	},
 })

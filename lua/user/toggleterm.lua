@@ -40,6 +40,7 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 local Terminal = require("toggleterm.terminal").Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+local jupyter = Terminal:new({ cmd = "jupyter notebook --ip='*' --NotebookApp.token='' --NotebookApp.password=''", hidden = true})
 
 function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
@@ -67,4 +68,8 @@ local python = Terminal:new({ cmd = "python", hidden = true })
 
 function _PYTHON_TOGGLE()
 	python:toggle()
+end
+
+function _JUPYTER_TOGGLE()
+  jupyter:toggle()
 end
