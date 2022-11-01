@@ -1,6 +1,7 @@
 
 # TODO:
 
+
 - Manage Terminals
 - Right Hand Window for Code Navigation
 - Launch Jupyter Notebooks
