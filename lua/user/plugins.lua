@@ -105,6 +105,12 @@ return packer.startup(function(use)
     commit = "ed65f84abc4a1e5d8f368d7e02601fc0357ea15e",
   }
 
+  -- Todo Comments
+  use {
+    "folke/todo-comments.nvim",
+    commit = "530eb3a896e9eef270f00f4baafa102361afc93b"
+  }
+
   -- Symbols Outline
   use {
     "simrat39/symbols-outline.nvim",
