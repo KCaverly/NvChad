@@ -105,18 +105,11 @@ return packer.startup(function(use)
     commit = "ed65f84abc4a1e5d8f368d7e02601fc0357ea15e",
   }
 
-  -- Todo Comments
-  use {
-    "folke/todo-comments.nvim",
-    commit = "530eb3a896e9eef270f00f4baafa102361afc93b"
-  }
-
   -- Symbols Outline
   use {
     "simrat39/symbols-outline.nvim",
     commit = "6a3ed24c5631da7a5d418bced57c16b32af7747c"
   }
-
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

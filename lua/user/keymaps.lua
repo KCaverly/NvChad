@@ -94,11 +94,6 @@ keymap("n", "<leader>s", ":lua require('leap').leap { target_windows = { vim.fn.
 -- Toggle Trouble.nvim quickfix list
 keymap("n", "<leader>tr", ":TroubleToggle<CR>", opts)
 
--- Todo --
--- Toggle Todo Comments quickfix list
-keymap("n", "<leader>td", ":TodoTelescope<CR>", opts)
-
-
 -- Peaches --
 -- Trigger peaches commands
 keymap("n", "<C-f>", ':silent !tmux split-window "~/.local/bin/peaches projects"<CR>', opts)
