@@ -111,6 +111,9 @@ return packer.startup(function(use)
     commit = "6a3ed24c5631da7a5d418bced57c16b32af7747c"
   }
 
+  -- Peek.nvim
+  use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

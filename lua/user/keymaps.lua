@@ -103,3 +103,7 @@ keymap("n", "<C-g>", ':silent !tmux split-window "~/.local/bin/peaches ssh"<CR>'
 -- Open Right hand Symbols Outline Panel
 keymap("n", "<leader>ts", ":SymbolsOutline<CR>", opts)
 
+-- Peek.nvim --
+-- Open markdown preview
+keymap("n", "<leader>mo", ":lua require('peek').open()<CR>", opts)
+keymap("n", "<leader>mc", ":lua require('peek').close()<CR>", opts)
