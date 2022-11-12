@@ -114,6 +114,11 @@ return packer.startup(function(use)
   -- Peek.nvim
   use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
 
+  -- Sticky Scroll
+  use {
+    "nvim-treesitter/nvim-treesitter-context"
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
