@@ -107,3 +107,8 @@ keymap("n", "<leader>ts", ":SymbolsOutline<CR>", opts)
 -- Open markdown preview
 keymap("n", "<leader>mo", ":lua require('peek').open()<CR>", opts)
 keymap("n", "<leader>mc", ":lua require('peek').close()<CR>", opts)
+
+-- Diffview.nvim --
+-- Open Diffview Window
+keymap("n", "<leader>gd", ":lua require('diffview').open()<CR>", opts)
+keymap("n", "<leader>gq", ":lua require('diffview').close()<CR>", opts)
