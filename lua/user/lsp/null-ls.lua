@@ -19,9 +19,5 @@ null_ls.setup({
     diagnostics.mypy.with({ extra_args = {"--ignore-missing-imports", "--follow-imports=silent"}}),
     diagnostics.flake8.with({ extra_args = {"--max-line-length", "88", "--ignore=E203"}}),
 
-    -- General
-    completion.spell,
-    diagnostics.cspell
-
 	},
 })

@@ -122,8 +122,6 @@ return packer.startup(function(use)
   -- DiffView.Nvim
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim', commit="d2d9b18bd50fa1363bd8bdf65c9678fb1af125b3"}
 
--- Packer
-use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
