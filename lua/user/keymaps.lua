@@ -80,6 +80,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "<leader>tj", ":lua _JUPYTER_TOGGLE()<CR>", opts)
+keymap("n", "<leader>te", ":lua _EMANOTE_TOGGLE()<CR>", opts)
 
 -- NvimTree --
 -- Manage NvimTree
